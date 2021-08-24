@@ -1,11 +1,12 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/img/techsprintLogo.png" sizes="16x16 32x32" >
 
-  <title>IT Council | Techsprint</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>IT Council | TechSprint</title>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./Particles/css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
@@ -107,32 +108,33 @@
 
       <h1 class="text" style="color: white; font-size:100px; text-align: center;">
         EVENTS </h1>
-      <section class="FPSandTHINK">
-        <div class="Glasscontainer">
-          <div class="Glasscard" style="background-image: linear-gradient(rgb(212, 100, 100), rgba(0, 0, 0, 0.6)), url('./img/game.jpg');
-          ">
-            <a href="fps.html" style="text-decoration: none">
 
+        <div class="Glasscontainer webdev-container">
+          <div class="Glasscard" style="background-image: linear-gradient(rgb(130, 73, 0), rgba(0, 0, 0, 0.6)), url('./img/webdev.jpg');
+              ">
+            <a href="./webdev.html" style="text-decoration: none">
+  
               <div class="front">
-                <h1 style="color: white; font-weight: 300; font-size: 200px;">FPS</h1>
+                <h1 style="color: white; font-weight: 500; font-size: 100px; text-align: center;">
+                  WEB DEV CHALLENGE</h1>
               </div>
+  
           </div>
           </a>
-
-
+  
+  
           <div class="Glasscard"
-            style="background-image: linear-gradient(rgb(0, 255, 242,100), rgb(97, 97, 97, 0.6)), url('./img/think.jpg');">
-            <a href="./thinkathon.html" style="text-decoration: none">
-
+            style="background-image: linear-gradient(rgb(0, 255, 242,100), rgb(97, 97, 97, 0.6)), url('./img/Trivia.jpg');">
+            <a href="./trivia.html" style="text-decoration: none">
+  
               <div class="front">
-                <h1 style="color: white; font-weight: 500; font-size: 90px;">THINK-A-THON</h1>
+                <h1 style="color: white; font-weight: 500; font-size: 100px; ">TRIVIA</h1>
               </div>
+            </a>
           </div>
-
-          </a>
-
         </div>
-      </section>
+      </div>
+
 
       <div class="Glasscontainer" id="d404">
         <div class="Glasscard"
@@ -148,32 +150,36 @@
       </div>
       </a>
 
-      <div class="Glasscontainer webdev-container">
-        <div class="Glasscard" style="background-image: linear-gradient(rgb(130, 73, 0), rgba(0, 0, 0, 0.6)), url('./img/webdev.jpg');
-            ">
-          <a href="./webdev.html" style="text-decoration: none">
-
-            <div class="front">
-              <h1 style="color: white; font-weight: 500; font-size: 100px; text-align: center;">
-                WEB DEV CHALLENGE</h1>
-            </div>
-
-        </div>
-        </a>
+      <section class="FPSandTHINK">
+        <div class="Glasscontainer">
 
 
-        <div class="Glasscard"
-          style="background-image: linear-gradient(rgb(0, 255, 242,100), rgb(97, 97, 97, 0.6)), url('./img/Trivia.jpg');">
-          <a href="./trivia.html" style="text-decoration: none">
 
-            <div class="front">
-              <h1 style="color: white; font-weight: 500; font-size: 100px; ">TRIVIA</h1>
-            </div>
+          <div class="Glasscard"
+            style="background-image: linear-gradient(rgb(0, 255, 242,100), rgb(97, 97, 97, 0.6)), url('./img/think.jpg');">
+            <a href="./thinkathon.html" style="text-decoration: none">
+
+              <div class="front">
+                <h1 style="color: white; font-weight: 500; font-size: 90px;">THINK-A-THON</h1>
+              </div>
+          </div>
+
+          </a>
+          <div class="Glasscard" style="background-image: linear-gradient(rgb(212, 100, 100), rgba(0, 0, 0, 0.6)), url('./img/game.jpg');
+          ">
+            <a href="fps.html" style="text-decoration: none">
+
+              <div class="front">
+                <h1 style="color: white; font-weight: 300; font-size: 200px;">FPS</h1>
+              </div>
+          </div>
           </a>
         </div>
-      </div>
+      </section>
     </section>
-    </div>
+
+
+      
 
     <!----------Contact---------->
 
@@ -318,6 +324,64 @@
       window.kommunicate = m; m._globals = kommunicateSettings;
     })(document, window.kommunicate || {});
     /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+  </script>
+
+<script type="text/javascript">
+  var ml4 = {};
+ml4.opacityIn = [0,1];
+ml4.scaleIn = [0.2, 1];
+ml4.scaleOut = 3;
+ml4.durationIn = 800;
+ml4.durationOut = 600;
+ml4.delay = 500;
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml4 .letters-1',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-1',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-2',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: ml4.opacityIn,
+    scale: ml4.scaleIn,
+    duration: ml4.durationIn
+  }).add({
+    targets: '.ml4 .letters-3',
+    opacity: 0,
+    scale: ml4.scaleOut,
+    duration: ml4.durationOut,
+    easing: "easeInExpo",
+    delay: ml4.delay
+  }).add({
+    targets: '.ml4',
+    opacity: 0,
+    duration: 500,
+    delay: 500
+  })
+  setTimeout(function(){
+    var slideBox = document.getElementById('preloader');
+    slideBox.style.display = 'none';
+}, 5000); 
   </script>
 
 </body>
