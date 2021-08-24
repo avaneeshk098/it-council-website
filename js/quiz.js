@@ -1,5 +1,5 @@
 window.onload = () => {
-    if (localStorage.getItem('filled') === 'true') {
+    if (localStorage.getItem('filledForm') === 'true') {
         document.querySelector('.Discord').style.display = 'flex'
         document.querySelector('.correct').style.display = 'none'
         document.querySelector('.qa').style.display = 'none'
@@ -51,6 +51,7 @@ window.onload = () => {
         let adm = document.getElementById('adm').value
         let discord = document.getElementById('discord').value
         let phone = document.getElementById('phone').value
+         let email = document.getElementById('email').value
 
         fetch('https://it-council-api1.herokuapp.com/backend_', {
             method: 'POST',
@@ -64,13 +65,14 @@ window.onload = () => {
                 dps_admission_number: adm,
                 discord: discord,
                 phone: phone,
+                email: email
             }),
         })
             .then(response => {
                 if (response.status === 200) {
                     document.querySelector('.Discord').style.display = 'flex'
                     document.querySelector('.correct').style.display = 'none'
-                    localStorage.setItem('filled', true)
+                    localStorage.setItem('filledForm', true)
                 } else {
                     fetch('https://it-council-api2.herokuapp.com/backend_', {
                         method: 'POST',
@@ -84,6 +86,7 @@ window.onload = () => {
                             dps_admission_number: adm,
                             discord: discord,
                             phone: phone,
+                            email: email
                         }),
                     })
                         .then(response => {
@@ -94,7 +97,7 @@ window.onload = () => {
                                 document.querySelector(
                                     '.correct',
                                 ).style.display = 'none'
-                                localStorage.setItem('filled', true)
+                                localStorage.setItem('filledForm', true)
                             } else {
                                 alert(
                                     'There was an issue while adding your registration. Please fill the form again in a while and submit.',
